@@ -41,7 +41,21 @@ pip install pymongo==4.8.0
 
 ---
 
+### 2. Install MongoDB Clients
+To run shell scripts (Tasks 0-7), you need the MongoDB client:
+\`\`\`bash
+sudo apt install -y mongodb-clients
+\`\`\`
+
+---
+
 ## How to Test the Tasks
+
+### A. MongoDB Shell Scripts (Tasks 0-7)
+To run scripts like Task 6, use the following command:
+\`\`\`bash
+cat 6-update | mongo my_db
+\`\`\`
 
 ### Task 8: List all documents
 \`\`\`bash
