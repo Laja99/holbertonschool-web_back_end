@@ -13,8 +13,10 @@ class StudentsController {
     readDatabase(databaseFile)
       .then((fields) => {
         let output = 'This is the list of our students';
-        // Sort fields case-insensitively
-        const sortedFields = Object.keys(fields).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        // Sort fields case-insensitively with keeping lines under max-length limit
+        const sortedFields = Object.keys(fields).sort((a, b) => (
+          a.toLowerCase().localeCompare(b.toLowerCase())
+        ));
 
         sortedFields.forEach((field) => {
           output += `\nNumber of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
