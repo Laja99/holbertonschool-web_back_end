@@ -8,7 +8,7 @@ function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
     const lines = data.split('\n');
-    
+
     // Filter out empty lines and header
     const students = lines
       .map((line) => line.trim())
